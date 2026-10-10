@@ -77,15 +77,319 @@ button{font:inherit}
 .solutions-section{background:radial-gradient(circle at 15% 10%,rgba(66,201,200,.12),transparent 25%),#031a25}.solution-tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:25px}.tab{background:none;border:0;color:#8eb6bc;padding:13px 17px;cursor:pointer;border-bottom:2px solid transparent}.tab.active{color:var(--cyan);border-color:var(--cyan)}.tab-panel{display:none;grid-template-columns:repeat(3,1fr);gap:12px}.tab-panel.active{display:grid}.tab-panel div{padding:23px;border:1px solid var(--line);border-radius:17px;background:rgba(8,50,64,.6)}.tab-panel div:before{content:"✓";color:var(--cyan);margin-right:12px}
 .checklist{margin-top:70px;border:1px solid var(--line);border-radius:var(--radius);padding:35px;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;background:linear-gradient(135deg,rgba(12,73,88,.8),rgba(3,30,42,.8))}.checks{display:grid;gap:10px}.checks label{display:flex;gap:12px;padding:12px;border-radius:12px;background:rgba(255,255,255,.035);cursor:pointer}.checks input{accent-color:var(--cyan)}.check-message{grid-column:1/-1;color:var(--cyan);margin:0;font-weight:700}
 .sources-section{background:#e8f8f6;color:var(--ink)}.sources-section p{color:#4d7077}.source-list{border-top:1px solid rgba(7,80,88,.16)}.source-list a{display:grid;grid-template-columns:50px 1fr 30px;gap:15px;align-items:center;padding:23px 0;border-bottom:1px solid rgba(7,80,88,.16);text-decoration:none;color:var(--ink)}.source-list a:hover{color:#087e85}.source-list small{display:block;color:#678187;margin-top:3px}.source-list b{font-size:1.3rem}.source-disclaimer{margin-top:25px;padding:17px;border:1px solid rgba(7,80,88,.14);border-radius:15px;font-size:.82rem;color:#58747a}
-.team-section{background:#031923}.team-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}.member{text-align:center}.member-photo{aspect-ratio:1;border:1px dashed rgba(99,230,225,.3);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(66,190,195,.15),rgba(3,27,38,.8));color:#679aa0;font-size:.62rem;letter-spacing:.1em;transition:.3s}.member:hover .member-photo{transform:translateY(-5px);border-color:var(--cyan)}.member h3{margin-top:16px;font-size:1rem}.final-note{max-width:760px;margin:80px auto 0;text-align:center}.final-note>span{font:800 5rem Georgia;color:var(--cyan);line-height:.3}.final-note p{font:1.1rem Manrope;color:#c4e1e2}.final-note small{color:#5e8b91;letter-spacing:.15em}
-.footer{padding:40px 0;background:#021017;border-top:1px solid var(--line)}.footer .container{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer p{margin:0;font-size:.8rem}.back-top{text-decoration:none;font-size:.8rem;color:var(--cyan)}
-.cursor-glow{position:fixed;width:18px;height:18px;border:1px solid rgba(99,230,225,.6);border-radius:50%;pointer-events:none;z-index:100;translate:-50% -50%;opacity:0;transition:width .2s,height .2s,opacity .2s}.cursor-glow.active{opacity:1}.cursor-glow.hover{width:38px;height:38px;background:rgba(99,230,225,.05)}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.nav-menu{gap:16px}.info-grid,.human-grid{grid-template-columns:repeat(2,1fr)}.pollution-grid,.stats-grid,.life-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(3,1fr)}.oil-layout,.split-heading,.plastic-copy,.checklist{grid-template-columns:1fr}.hero-image-placeholder{position:relative;right:auto;bottom:auto;width:min(100% - 40px,600px);margin:60px auto 0}.hero{padding-bottom:90px}.tab-panel.active{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.container{width:min(calc(100% - 28px),var(--max))}.section{padding:90px 0}.nav-menu{position:absolute;top:76px;left:14px;right:14px;display:grid;gap:0;padding:8px;background:rgba(2,19,28,.96);border:1px solid var(--line);border-radius:18px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s}.nav-menu.open{transform:none;opacity:1;pointer-events:auto}.nav-menu a{padding:13px 14px}.menu-toggle{display:grid;gap:4px}.menu-toggle span{width:24px;height:2px;background:var(--foam)}.hero{align-items:flex-start;padding-top:150px}.hero h1{font-size:clamp(3.2rem,16vw,5.3rem)}.hero-actions{align-items:flex-start;flex-direction:column;gap:18px}.info-grid,.human-grid,.team-grid{grid-template-columns:1fr 1fr}.wide-placeholder{min-height:220px}.tall-placeholder{min-height:340px}.flow-step{border-radius:20px}.tab-panel.active{grid-template-columns:1fr}.footer .container{align-items:flex-start;flex-direction:column}.cursor-glow{display:none}}
-@media(max-width:430px){.info-grid,.human-grid,.team-grid{grid-template-columns:1fr}.section-heading{margin-bottom:38px}.checklist{padding:24px}.stat-card{padding:25px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.fish,.rays,.hero-bubbles:before,.hero-bubbles:after{animation:none}.btn,.info-card,.pollution-card,.life-card,.member-photo{transition:none}}
+.team-section{background:#031923}.team-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}.member{text-align:center}
 
+/* Circular photo placeholder */
+.member-photo{
+  aspect-ratio:1;
+  border:1px dashed rgba(99,230,225,.3);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:radial-gradient(
+    circle,
+    rgba(66,190,195,.15),
+    rgba(3,27,38,.8)
+  );
+  color:#679aa0;
+  font-size:.62rem;
+  letter-spacing:.1em;
+  transition: transform 0.3s, border-color 0.3s;
+}
+/* Actual photo inside the circle */
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+/* Hover effect */
+.member:hover .member-photo {
+  transform: translateY(-5px);
+  border-color: var(--cyan);
+}
+
+/* Team member name */
+.member h3 {
+  margin-top: 16px;
+  font-size: 1rem;
+}
+
+/* Final note */
+.final-note {
+  max-width: 760px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.final-note > span {
+  font: 800 5rem Georgia;
+  color: var(--cyan);
+  line-height: 0.3;
+}
+
+.final-note p {
+  font: 1.1rem Manrope;
+  color: #c4e1e2;
+}
+
+.final-note small {
+  color: #5e8b91;
+  letter-spacing: 0.15em;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 0;
+  background: #021017;
+  border-top: 1px solid var(--line);
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.back-top {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--cyan);
+}
+
+/* Custom cursor effect */
+.cursor-glow {
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(99, 230, 225, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+  translate: -50% -50%;
+  opacity: 0;
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+
+.cursor-glow.active {
+  opacity: 1;
+}
+
+.cursor-glow.hover {
+  width: 38px;
+  height: 38px;
+  background: rgba(99, 230, 225, 0.05);
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .info-grid,
+  .human-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pollution-grid,
+  .stats-grid,
+  .life-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .oil-layout,
+  .split-heading,
+  .plastic-copy,
+  .checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image-placeholder {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(calc(100% - 40px), 600px);
+    margin: 60px auto 0;
+  }
+
+  .hero {
+    padding-bottom: 90px;
+  }
+
+  .tab-panel.active {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .container {
+    width: min(calc(100% - 28px), var(--max));
+  }
+
+  .section {
+    padding: 90px 0;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 76px;
+    left: 14px;
+    right: 14px;
+    display: grid;
+    gap: 0;
+    padding: 8px;
+    background: rgba(2, 19, 28, 0.96);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s;
+  }
+
+  .nav-menu.open {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-menu a {
+    padding: 13px 14px;
+  }
+
+  .menu-toggle {
+    display: grid;
+    gap: 4px;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--foam);
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 16vw, 5.3rem);
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .info-grid,
+  .human-grid,
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wide-placeholder {
+    min-height: 220px;
+  }
+
+  .tall-placeholder {
+    min-height: 340px;
+  }
+
+  .flow-step {
+    border-radius: 20px;
+  }
+
+  .tab-panel.active {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 430px) {
+  .info-grid,
+  .human-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .checklist {
+    padding: 24px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .fish,
+  .rays,
+  .hero-bubbles::before,
+  .hero-bubbles::after {
+    animation: none;
+  }
+
+  .btn,
+  .info-card,
+  .pollution-card,
+  .life-card,
+  .member-photo {
+    transition: none;
+  }
+}
 
 /* Narrative bridges and the connected biology chapter */
 .story-bridge{background:linear-gradient(145deg,#062d3d,#031721);overflow:hidden}
