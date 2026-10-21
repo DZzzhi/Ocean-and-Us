@@ -195,21 +195,266 @@
       </div>
     </section>
 
-    <section class="bio-section bio-research">
-      <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">03 — WHEN POLLUTION ENTERS THE PICTURE</p><h2>Small particles. A much bigger question.</h2><p class="bio-lead">Research has examined how living system exposure may influence photosynthesis across terrestrial, freshwater, and marine ecosystems. The study discussed here combines results from many observations and model-based estimates, so its global figures should be read as estimates—not direct measurements of every ecosystem (Zhu et al., 2025).</p></div>
-        <div class="bio-story-grid">
-          <article class="bio-chapter reveal"><span class="bio-chapter-number">THE QUESTION</span><h3>What changes when microplastics reach photosynthetic organisms?</h3><p>Microplastic pollution may affect photosynthetic activity and ecosystem productivity. Effects can depend on the organism and environmental conditions, so one result should not be treated as identical for every species or habitat (Zhu et al., 2025).</p></article>
-          <article class="bio-chapter reveal"><span class="bio-chapter-number">THE EVIDENCE</span><h3>Researchers looked across many studies</h3><p>The PNAS study, <em>“A global estimate of multiecosystem photosynthesis losses under microplastic pollution,”</em> synthesizes observations from existing studies and uses modeling approaches to estimate broader effects (Zhu et al., 2025).</p></article>
+ 
+<section class="bio-section bio-research" id="microplastic-evidence">
+  <style>
+    /* Section 03 layout only */
+    .bio-research .container {
+      max-width: 1120px;
+    }
+
+    .bio-research .section-heading {
+      max-width: 850px;
+      margin: 0 auto 42px;
+    }
+
+    .bio-research .section-heading h2 {
+      max-width: 760px;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin: 12px 0 18px;
+    }
+
+    .bio-research .bio-lead {
+      max-width: 720px;
+      line-height: 1.8;
+    }
+
+    .bio-research .bio-story-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .bio-research .bio-chapter {
+      min-width: 0;
+      padding: 28px;
+      border: 1px solid rgba(165, 240, 191, 0.2);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .bio-research .bio-chapter-number {
+      display: block;
+      margin-bottom: 18px;
+      color: #a5f0bf;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+
+    .bio-research .bio-chapter h3 {
+      font-size: 1.4rem;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .bio-research .bio-chapter p {
+      font-size: 0.94rem;
+      line-height: 1.8;
+      color: #a8c1c8;
+      margin: 0;
+    }
+
+    .bio-research .bio-evidence-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .bio-research .bio-number-card {
+      min-width: 0;
+      padding: 32px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #bcebc8, #e8f8e9);
+      color: #173d31;
+      overflow: hidden;
+    }
+
+    .bio-research .bio-number-card > strong {
+      display: block;
+      font-size: clamp(3.5rem, 7vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .bio-research .bio-number-card > span {
+      display: block;
+      margin-top: 10px;
+      font-weight: 700;
+      color: #315d4b;
+    }
+
+    .bio-research .bio-evidence-copy {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(23, 61, 49, 0.2);
+    }
+
+    .bio-research .bio-evidence-copy h3 {
+      font-size: 1.25rem;
+      margin: 0 0 12px;
+    }
+
+    .bio-research .bio-evidence-copy p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #315d4b;
+      margin: 0;
+    }
+
+    .bio-research .bio-caution {
+      margin-top: 22px;
+      padding: 18px 22px;
+      border-left: 3px solid #a5f0bf;
+      border-radius: 0 12px 12px 0;
+      background: rgba(165, 240, 191, 0.07);
+      color: #adc4cb;
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+
+    .bio-research .citation-line {
+      margin-top: 22px;
+      font-size: 0.8rem;
+    }
+
+    .bio-research .citation-line a,
+    .bio-research .bio-chapter a {
+      color: #a5f0bf;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 760px) {
+      .bio-research .section-heading {
+        margin-bottom: 28px;
+      }
+
+      .bio-research .bio-story-grid,
+      .bio-research .bio-evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bio-research .bio-chapter,
+      .bio-research .bio-number-card {
+        padding: 24px;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">
+        03 — WHEN POLLUTION ENTERS THE PICTURE
+      </p>
+
+      <h2>Small particles.<br>
+        <em>A much bigger question.</em>
+      </h2>
+
+      <p class="bio-lead">
+        Research has examined how microplastic exposure may influence
+        photosynthesis across terrestrial, freshwater, and marine ecosystems.
+        This study combines observations with model-based estimates, so its
+        global figures should be read as estimates—not direct measurements
+        of every ecosystem (Zhu et al., 2025).
+      </p>
+    </div>
+
+    <div class="bio-story-grid">
+      <article class="bio-chapter reveal">
+        <span class="bio-chapter-number">THE QUESTION</span>
+
+        <h3>
+          What happens when microplastics reach photosynthetic organisms?
+        </h3>
+
+        <p>
+          Microplastic pollution may affect photosynthetic activity and
+          ecosystem productivity. Effects can vary by organism and
+          environmental conditions, so results should not be assumed to
+          apply equally to every species or habitat (Zhu et al., 2025).
+        </p>
+      </article>
+
+      <article class="bio-chapter reveal">
+        <span class="bio-chapter-number">THE EVIDENCE</span>
+
+        <h3>A wider view across many studies</h3>
+
+        <p>
+          The PNAS study, <em>“A global estimate of multiecosystem
+          photosynthesis losses under microplastic pollution,”</em>
+          synthesizes existing observations and uses modeling approaches
+          to estimate broader effects (Zhu et al., 2025).
+        </p>
+      </article>
+    </div>
+
+    <div class="bio-evidence-grid">
+      <article class="bio-number-card reveal">
+        <strong>3,286</strong>
+        <span>Observations · 157 studies</span>
+
+        <div class="bio-evidence-copy">
+          <h3>What this number tells us</h3>
+
+          <p>
+            Researchers combined observations with statistical analysis
+            and machine-learning methods to estimate effects across
+            ecosystems. This helps reveal broader patterns, although
+            the findings still depend on the quality and scope of
+            the underlying evidence (Zhu et al., 2025).
+          </p>
         </div>
-        <div class="bio-evidence-grid">
-          <div class="bio-number-card reveal"><strong>3,286</strong><span>observations from 157 studies</span>
-          <div class="bio-evidence-copy reveal"><h3>What this number tells us</h3><p>The paper combines a large body of observations with statistical analysis and modeling, including machine-learning methods, to estimate effects across ecosystems (Zhu et al., 2025). This approach helps researchers explore broad patterns, while remaining dependent on the quality and scope of the underlying evidence.</p>
-          </div>
-        </div>
-        <p class="citation-line reveal">Research source: <a href="https://www.pnas.org/doi/10.1073/pnas.2423957122" target="_blank" rel="noopener">Proceedings of the National Academy of Sciences (PNAS), 2025 ↗</a></p>
-      </div>
-    </section>
+      </article>
+
+      <article class="bio-chapter reveal">
+        <span class="bio-chapter-number">
+          UNDERSTANDING THE RESULTS
+        </span>
+
+        <h3>Read the evidence carefully.</h3>
+
+        <p>
+          The findings highlight a potential global concern:
+          microplastic exposure may reduce photosynthesis. However,
+          global estimates are based on observations and models.
+          They do not mean every photosynthetic organism or ecosystem
+          responds in the same way.
+        </p>
+
+        <p style="margin-top: 18px;">
+          <a href="https://www.pnas.org/doi/10.1073/pnas.2423957122"
+             target="_blank"
+             rel="noopener">
+            Read the original PNAS study ↗
+          </a>
+        </p>
+      </article>
+    </div>
+
+    <p class="bio-caution reveal">
+      <strong>Important distinction:</strong>
+      Global estimates describe modeled patterns across a broad evidence
+      base. They should not be interpreted as direct measurements of
+      every ecosystem.
+    </p>
+
+    <p class="citation-line reveal">
+      Research source:
+      <a href="https://www.pnas.org/doi/10.1073/pnas.2423957122"
+         target="_blank"
+         rel="noopener">
+        Proceedings of the National Academy of Sciences (PNAS), 2025 ↗
+      </a>
+    </p>
+  </div>
+</section>
+
 
     <section class="bio-section bio-connection">
       <div class="container">
