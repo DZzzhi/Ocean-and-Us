@@ -101,3 +101,181 @@ html { scroll-behavior: smooth; }
   .physics-card,.physics-primary-link,.physics-nav-links a { transition:none; }
   .physics-card:hover,.physics-primary-link:hover { transform:none; }
 }
+
+
+/* ==========================================
+   BACKPACK SYSTEM — TEXT CLARITY UPGRADE
+   Keeps the existing ocean-inspired theme
+   ========================================== */
+
+/* Clearer default text colors */
+:root {
+  --physics-ink: #173344;
+  --physics-muted: #455d6c;
+  --physics-card: #ffffff;
+  --physics-primary: #126b78;
+  --physics-accent: #e3a45e;
+  --physics-line: #d3e0e5;
+}
+
+/* Main content */
+.physics-main {
+  color: #173344;
+}
+
+.physics-section h2,
+.physics-card h3,
+.physics-calc-card h3,
+.physics-system-list h3 {
+  color: #173344;
+}
+
+/* Paragraphs and supporting text */
+.physics-section p,
+.physics-intro p,
+.physics-evaluation p,
+.physics-card > p:not(.physics-card-kicker),
+.physics-calc-card p,
+.physics-system-list p,
+.physics-check-list,
+.physics-references li {
+  color: #455d6c;
+}
+
+/* Navigation: brighter text */
+.physics-nav-links a {
+  color: #f3faff;
+}
+
+.physics-nav-links a:hover,
+.physics-nav-links a.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Hero heading and description */
+.physics-hero h1,
+.physics-case-study h2 {
+  color: #ffffff;
+}
+
+.physics-hero-lede {
+  color: #f2f8fc;
+}
+
+/* Gold accent: slightly richer and easier to see */
+.physics-eyebrow {
+  color: #ffd99e;
+}
+
+.physics-stat-result strong {
+  color: #ffda9f;
+}
+
+/* Cards: readable dark text on white backgrounds */
+.physics-card,
+.physics-calc-card,
+.physics-system-list article,
+.physics-references details {
+  background: #ffffff;
+}
+
+.physics-card-kicker,
+.physics-system-list article > span {
+  color: #126b78 !important;
+}
+
+/* Equations: improve contrast */
+.physics-equation {
+  color: #123f4c;
+  background: #e6f3f5;
+}
+
+.secondary-equation {
+  color: #59411f;
+  background: #fff2dc;
+}
+
+/* Calculation labels and results */
+.physics-calc-card > span {
+  color: #455d6c;
+}
+
+.physics-calc-answer {
+  color: #126b78;
+}
+
+/* Notes and takeaways */
+.physics-note,
+.physics-takeaway {
+  color: #244653;
+}
+
+.physics-note {
+  background: #fff7eb;
+}
+
+.physics-takeaway {
+  background: #eaf5f6;
+}
+
+/* References and links */
+.physics-references summary {
+  color: #173344;
+}
+
+.physics-references li {
+  color: #455d6c;
+}
+
+.physics-references a {
+  color: #075c70;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Footer and dark panels: bright, legible text */
+.physics-footer {
+  color: #f2f7fb;
+}
+
+.physics-footer a {
+  color: #ffda9f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.physics-case-copy > p:last-child {
+  color: #f1f7fb;
+}
+
+.physics-stat-label {
+  color: #edf6fc;
+}
+
+.physics-stat-result span {
+  color: #f2f7fb;
+}
+
+.physics-source-note,
+.physics-reference-note {
+  color: #e0edf5;
+}
+
+/* Make keyboard navigation easier to see */
+.physics-nav-links a:focus-visible,
+.physics-primary-link:focus-visible,
+.physics-footer a:focus-visible,
+.physics-references a:focus-visible {
+  outline: 3px solid #ffd99e;
+  outline-offset: 4px;
+}
+
+/* Preserve a smooth, readable experience on small screens */
+@media (max-width: 760px) {
+  .physics-section p,
+  .physics-check-list,
+  .physics-references li {
+    line-height: 1.85;
+  }
+}
