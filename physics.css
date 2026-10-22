@@ -644,3 +644,93 @@ html {
     transform: none;
   }
 }
+
+
+/* ===== FIX ALL MUTED TEXT ===== */
+
+/* Main content: dark, readable text */
+.physics-main,
+.physics-main p,
+.physics-main li,
+.physics-main span,
+.physics-main small,
+.physics-main label,
+.physics-main summary {
+  color: #173344 !important;
+  opacity: 1 !important;
+}
+
+/* Headings: deep navy */
+.physics-main h1,
+.physics-main h2,
+.physics-main h3,
+.physics-main h4 {
+  color: #071D32 !important;
+  opacity: 1 !important;
+}
+
+/* Body paragraphs and descriptions */
+.physics-intro p,
+.physics-evaluation p,
+.physics-card p,
+.physics-calc-card p,
+.physics-system-list p,
+.physics-check-list li,
+.physics-references li {
+  color: #233F50 !important;
+}
+
+/* Dark ocean sections: make ALL text white */
+.physics-hero,
+.physics-hero p,
+.physics-hero span,
+.physics-hero small,
+.physics-hero .physics-brand,
+.physics-hero .physics-nav-links a,
+.physics-case-study,
+.physics-case-study p,
+.physics-case-study span,
+.physics-case-study small,
+.physics-case-study strong,
+.physics-footer,
+.physics-footer p {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
+/* Gold accents on dark backgrounds */
+.physics-hero .physics-eyebrow,
+.physics-case-study .physics-stat-result strong,
+.physics-footer a {
+  color: #FFD700 !important;
+}
+
+/* Teal links and highlighted labels on light backgrounds */
+.physics-main a,
+.physics-card-kicker,
+.physics-system-list article > span,
+.physics-calc-answer {
+  color: #005766 !important;
+  opacity: 1 !important;
+}
+
+/* Make equation text readable */
+.physics-equation {
+  color: #00333D !important;
+  background: #D9FFFF !important;
+  opacity: 1 !important;
+}
+
+.secondary-equation {
+  color: #482800 !important;
+  background: #FFF0C2 !important;
+}
+
+/* Remove faded appearance from cards and labels */
+.physics-card,
+.physics-calc-card,
+.physics-system-list article,
+.physics-references details,
+.physics-stat-panel {
+  opacity: 1 !important;
+}
