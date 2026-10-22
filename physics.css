@@ -56,8 +56,8 @@ html { scroll-behavior: smooth; }
 .physics-meter span { display:block; height:100%; border-radius:inherit; background:#f2c98f; }
 .physics-stat-result { display:flex; flex-wrap:wrap; align-items:baseline; gap:12px; padding-top:18px; border-top:1px solid #ffffff33; }
 .physics-stat-result strong { color:#f2c98f; font-size:2.2rem; }
-.physics-stat-result span { color:#ffffffdb; }
-.physics-source-note,.physics-reference-note { margin:20px 0 0; color:#ffffffad; font-size:.78rem; line-height:1.6; }
+.physics-stat-result span { color:#272669; }
+.physics-source-note,.physics-reference-note { margin:20px 0 0; color:#272669; font-size:.78rem; line-height:1.6; }
 .physics-calc-grid { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; gap:18px; }
 .physics-calc-card { padding:25px; border:1px solid var(--physics-line); border-radius:18px; background:var(--physics-card); }
 .physics-calc-card>span { color:var(--physics-muted); font-size:.88rem; }
