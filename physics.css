@@ -1,6 +1,6 @@
 /* Page-specific styles. Selectors are prefixed to avoid changing other pages. */
 :root {
-  --physics-ink: var(--text-color, #172c3b);
+  --physics-ink: var(--text-color,#f2ffff);
   --physics-muted: var(--muted-color, #61717d);
   --physics-card: var(--card-background, #fff);
   --physics-primary: var(--primary-color,#e6f5f7);
