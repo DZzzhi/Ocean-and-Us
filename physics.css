@@ -3,7 +3,7 @@
   --physics-ink: var(--text-color, #172c3b);
   --physics-muted: var(--muted-color, #61717d);
   --physics-card: var(--card-background, #fff);
-  --physics-primary: var(--primary-color, #126b78);
+  --physics-primary: var(--primary-color,#e6f5f7);
   --physics-accent: var(--accent-color, #e3a45e);
   --physics-line: #dce6e9;
   --physics-radius: 20px;
