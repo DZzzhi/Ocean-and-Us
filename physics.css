@@ -5,3 +5,112 @@
 @media(max-width:580px){.wrap{width:calc(100% - 32px)}.site-header{padding:12px 16px}.brand small{font-size:.62rem}.nav-tab{flex:1 1 45%;text-align:center}.hero{padding-top:40px;padding-bottom:45px}.hero-lead{font-size:1rem}.hero-art{height:360px}.art-sun{width:160px;height:160px;top:45px;right:35px}.card-top{top:55px;left:10px}.card-bottom{bottom:55px;right:8px}.ticker-inner{display:block;padding:20px 0}.ticker-inner span{display:block;margin-bottom:8px}.section-pad{padding:55px 0}.three-cards,.two-col-data,.habit-grid,.impact-grid,.steps-grid{grid-template-columns:1fr}.info-card{padding:23px}.callout{display:block;margin-bottom:55px;padding:26px}.callout-stamp{width:100px;height:100px;margin-top:20px}.callout-stamp span{font-size:2rem}.page-hero{padding-top:45px;padding-bottom:30px}.page-hero h1{font-size:2.8rem}.content-grid{padding-bottom:20px}.finding-banner{padding:23px;gap:15px}.finding-icon{width:48px;height:48px;font-size:1.5rem}.finding-banner h2{font-size:1.4rem}.donut{width:90px;height:90px}.chart-card{padding:20px 15px}.bar-row{grid-template-columns:1fr 52px;gap:7px}.bar-row>span{grid-column:1/-1;font-size:.8rem}.bar-row .bar-track{grid-column:1}.bar-row>b{grid-column:2;grid-row:2}.habit-grid article{padding:20px}.habit-grid p{min-height:0}.physics-card,.physics-card.reverse{grid-template-columns:1fr;padding:20px}.physics-visual{height:140px}.physics-visual svg{height:130px}.physics-copy h2{font-size:1.5rem}.formula{align-items:flex-start;flex-direction:column;gap:5px}.caution-panel{padding:24px;gap:13px}.tool-panel{padding:22px}.action-note{align-items:flex-start;padding:24px;gap:14px}.footer-inner{align-items:flex-start;flex-wrap:wrap}.footer-inner>p{order:3;flex-basis:100%}.next-row{padding-bottom:50px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.site-header,.site-footer,.btn,.menu-toggle,.next-row{display:none!important}.page{display:block!important;break-before:page}.page:first-child{break-before:auto}.wrap{width:100%}.hero{padding-top:10px}.physics-card,.info-card,.chart-card{break-inside:avoid}body{font-size:10pt}}
+
+
+/* ===== REFERENCES PAGE IMAGE PLACEHOLDERS ===== */
+
+.source-image-section {
+  margin: 40px 0;
+}
+
+.source-image-section .image-intro {
+  max-width: 680px;
+  color: #5d6d65;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.source-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.source-image-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #dce7df;
+  border-radius: 16px;
+  background: #fffdf9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.source-image-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(31, 101, 81, 0.09);
+}
+
+.source-image-placeholder {
+  min-height: 210px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f6f0, #fff5e9);
+  border-bottom: 1px dashed #b9cdbf;
+  color: #315849;
+}
+
+.source-image-placeholder .placeholder-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #b9cdbf;
+  border-radius: 50%;
+  background: #fffdf9;
+  font-size: 24px;
+}
+
+.source-image-placeholder strong {
+  font-size: 15px;
+}
+
+.source-image-placeholder span:last-child {
+  max-width: 280px;
+  color: #68786f;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.source-image-card figcaption {
+  padding: 18px;
+}
+
+.source-image-card figcaption strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #263e34;
+}
+
+.source-image-card figcaption p {
+  margin: 0;
+  color: #617168;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* When you insert an actual image */
+.source-image-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  .source-image-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .source-image-placeholder {
+    min-height: 175px;
+  }
+}
